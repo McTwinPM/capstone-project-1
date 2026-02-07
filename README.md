@@ -16,3 +16,7 @@
 4. Set up pages
     a. Home
     b. favorites
+
+5. Cleanup
+    a. remove 'assets' and 'public' folders
+    b. remove comments of old code/unneeded comments
