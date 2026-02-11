@@ -3,25 +3,40 @@ import React, {useRef, useState, UserContext, useEffect} from 'react'
 
  
 
-function SearchBar({ searchTerm, setSearchTerm }) {
+function SearchBar({ searchTerm, setSearchTerm, setFoundAnime }) {
     const inputRef = useRef(null)
-    const fetchAnime = (searchTerm) => {
-        fetch(`https://api.jikan.moe/v4/anime?q=${searchTerm}`)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error('Error fetching anime:', error))
+    const fetchAnime = async (searchTerm) => {
+    try {
+        const response = await fetch(`https://api.jikan.moe/v4/anime?q=${searchTerm}`);
+        const data = await response.json();
+        
+        
+        for (const anime of data.data) {
+            if (anime.title_english && anime.title_english.toLowerCase() === searchTerm.toLowerCase()) {
+                return anime; 
+            }
+        }
+        
+       
+        return data.data.length > 0 ? data.data[0] : null;
+    } catch (error) {
+        console.error('Error fetching anime:', error);
+        return null;
     }
-    fetchAnime(searchTerm)
-    
+};
 
-
-    useEffect(() => {
-        inputRef.current.focus()
-    }, []);
-
-  const handleSearch = (e) => {
+const handleSearch = async (e) => {
     e.preventDefault();
-  };
+    if (searchTerm) {
+        const foundAnime = await fetchAnime(searchTerm);
+        if (foundAnime) {
+            console.log('Found anime:', foundAnime);
+            // setFoundAnime(foundAnime);
+
+        }
+    }
+};
+
 
     return (
         <form onSubmit={handleSearch}>
@@ -37,4 +52,4 @@ function SearchBar({ searchTerm, setSearchTerm }) {
     )
 }
 
-export default SearchBar
+export default SearchBar; 
