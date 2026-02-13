@@ -31,7 +31,7 @@ const handleSearch = async (e) => {
         const foundAnime = await fetchAnime(searchTerm);
         if (foundAnime) {
             console.log('Found anime:', foundAnime);
-            // setFoundAnime(foundAnime);
+            setFoundAnime(foundAnime);
 
         }
     }
