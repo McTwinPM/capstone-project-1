@@ -2,18 +2,22 @@ import { useState, useEffect } from 'react'
 import { Outlet, Link, useOutletContext, } from 'react-router-dom'
 import SearchBar from '../components/SearchBar'
 
-function AnimeCard({ }) {
-  const { anime } = useOutletContext()
-  const [searchTerm, setSearchTerm] = useState('')
-  const [foundAnime, setFoundAnime] = useState(null)
+function AnimeCard({ anime }) {
+ 
 
   return (
     <div>
-      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} setFoundAnime={setFoundAnime} />
-      <h1>{anime.title_english}</h1>
-      <img src={anime.image_url} alt={anime.title} />
-      <p>{anime.synopsis}</p>
-      
+      {anime && (
+        <>
+          <h1>{anime.title_english}</h1>
+          <p className='demographics'>{anime.demographics.map(demographic => demographic.name).join(', ')}</p>
+          <p className='synopsis'>{anime.synopsis}</p>
+          <p className='genres'>{anime.genres.map(genre => genre.name).join(', ')}</p>
+          <p className='themes'>{anime.themes.map(theme => theme.name).join(', ')}</p>
+          <p className='explicit-genres'>{anime.explicit_genres.map(explicit_genre => explicit_genre.name).join(', ')}</p>
+          
+        </>
+      )}
     </div>
   )
 }

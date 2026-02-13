@@ -9,14 +9,15 @@
     Look at previous react projects
 
 3. Set up components
-    a. searchbar
-    b. Navbar
-    c. favorites
+    1. searchbar (done)
+    2. Navbar
+    3. favorites
     
 4. Set up pages
-    a. Home
-    b. favorites
+    1. Home (done)
+    2. favorites
+    3. CSS for Home and Favorites
 
 5. Cleanup
-    a. remove 'assets' and 'public' folders
-    b. remove comments of old code/unneeded comments
+    1. remove 'assets' and 'public' folders
+    2. remove comments of old code/unneeded comments
