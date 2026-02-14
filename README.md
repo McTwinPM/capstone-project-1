@@ -11,11 +11,11 @@
 3. Set up components
     1. searchbar (done)
     2. Navbar (done)
-    3. favorites
+    3. favorites (done)
     
 4. Set up pages
     1. Home (done)
-    2. favorites
+    2. favorites (done)
     3. CSS for Home and Favorites
 
 5. Cleanup

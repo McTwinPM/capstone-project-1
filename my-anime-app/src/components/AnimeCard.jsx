@@ -25,7 +25,7 @@ function AnimeCard({ anime, favorites, updateFavorites }) {
 
 
   return (
-    <div>
+    <div className="anime-card">
       {anime && (
         <>
           <h1>{anime.title_english}</h1>

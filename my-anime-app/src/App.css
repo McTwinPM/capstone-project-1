@@ -1,11 +1,55 @@
-#root {
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: #EC5800;
+  font-size: 1.2em;
+
+ 
+ 
+
+
+}#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
+p.synopsis {
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+div.anime-card {
+  border-color: #EC5800;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1.5em;
+  margin: 1.5em auto;
+  max-width: 900px;
+  transition: border-color 0.25s;
+  border-color: #EC5800;
+}
+
+div.anime-card:hover {
+  border-color: #EC5800;
+}
+
+div.favorites-card {
+  border-color: #EC5800;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1.5em;
+  margin: 1.5em auto;
+  max-width: 900px;
+  transition: border-color 0.25s;
+}
+div.favorites-card:hover {
+  border-color: #EC5800;
+}
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -16,9 +60,9 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
-@keyframes logo-spin {
+/* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -31,7 +75,7 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
 
 .card {
   padding: 2em;
@@ -40,3 +84,5 @@
 .read-the-docs {
   color: #888;
 }
+
+
