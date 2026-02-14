@@ -11,6 +11,7 @@ function AnimeCard({ anime }) {
         <>
           <h1>{anime.title_english}</h1>
           <p className='demographics'>{anime.demographics.map(demographic => demographic.name).join(', ')}</p>
+          <p className='rating'>{anime.rating}</p>
           <p className='synopsis'>{anime.synopsis}</p>
           <p className='genres'>{anime.genres.map(genre => genre.name).join(', ')}</p>
           <p className='themes'>{anime.themes.map(theme => theme.name).join(', ')}</p>

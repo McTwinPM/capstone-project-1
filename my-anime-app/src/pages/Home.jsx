@@ -1,4 +1,4 @@
-// import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar'
 import SearchBar from '../components/SearchBar'
 import AnimeCard from './AnimeCard'
 import { useState, useEffect } from 'react'
@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} setFoundAnime={setFoundAnime} />
       {foundAnime && (
        <div className = "anime-card">
