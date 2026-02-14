@@ -1,24 +1,27 @@
-import Navbar from '../components/Navbar'
-import SearchBar from '../components/SearchBar'
-import AnimeCard from './AnimeCard'
-import { useState, useEffect } from 'react'
+import Navbar from "../components/Navbar";
+import SearchBar from "../components/SearchBar";
+import AnimeCard from "../components/AnimeCard";
+import { useState, useEffect } from "react";
 
-function Home() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [foundAnime, setFoundAnime] = useState(null)
-
+function Home({ favorites, updateFavorites }) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [foundAnime, setFoundAnime] = useState(null);
 
   return (
     <div>
       <Navbar />
-      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} setFoundAnime={setFoundAnime} />
+      <SearchBar
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        setFoundAnime={setFoundAnime}
+      />
       {foundAnime && (
-       <div className = "anime-card">
-        <AnimeCard anime={foundAnime} />
-       </div>
+        <div className="anime-card">
+          <AnimeCard anime={foundAnime} favorites={favorites} updateFavorites={updateFavorites} />
+        </div>
       )}
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
