@@ -10,7 +10,7 @@
 
 3. Set up components
     1. searchbar (done)
-    2. Navbar
+    2. Navbar (done)
     3. favorites
     
 4. Set up pages
