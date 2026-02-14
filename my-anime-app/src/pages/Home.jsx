@@ -10,13 +10,14 @@ function Home({ favorites, updateFavorites }) {
   return (
     <div>
       <Navbar />
+      <h1>Is This Anime Family Friendly?</h1>
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         setFoundAnime={setFoundAnime}
       />
       {foundAnime && (
-        <div className="anime-card">
+        <div className="anime-card-container">
           <AnimeCard anime={foundAnime} favorites={favorites} updateFavorites={updateFavorites} />
         </div>
       )}

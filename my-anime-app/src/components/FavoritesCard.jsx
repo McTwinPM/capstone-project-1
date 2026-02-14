@@ -4,7 +4,7 @@ import AnimeCard from './AnimeCard';
 
 function FavoritesCard({ storedFavorites }) {
   return (
-    <div>
+    <div className= "favorites-card">
       {storedFavorites && (
         <>
           <h1>{storedFavorites.title_english}</h1>
