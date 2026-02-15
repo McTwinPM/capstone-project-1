@@ -1,6 +1,5 @@
 import React from 'react';
-import anime from '../pages/Home';
-import AnimeCard from './AnimeCard';
+
 
 function FavoritesCard({ storedFavorites }) {
   return (
