@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import AnimeCard from "../components/AnimeCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Home({ favorites, updateFavorites }) {
   const [searchTerm, setSearchTerm] = useState("");

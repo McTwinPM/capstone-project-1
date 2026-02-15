@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React from 'react';
 
 
 function AnimeCard({ anime, favorites, updateFavorites }) {
