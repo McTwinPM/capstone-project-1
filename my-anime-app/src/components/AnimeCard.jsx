@@ -45,11 +45,6 @@ function AnimeCard({ anime, favorites, updateFavorites }) {
           <p className="themes">
             {anime.themes.map((theme) => theme.name).join(", ")}
           </p>
-          <p className="explicit-genres">
-            {anime.explicit_genres
-              .map((explicit_genre) => explicit_genre.name)
-              .join(", ")}
-          </p>
         </>
       )}
     </div>

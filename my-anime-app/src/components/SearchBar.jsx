@@ -1,10 +1,9 @@
-import React, {useRef} from 'react'
+import React from 'react'
 
 
  
 
 function SearchBar({ searchTerm, setSearchTerm, setFoundAnime }) {
-    const inputRef = useRef(null)
     const fetchAnime = async (searchTerm) => {
     try {
         const response = await fetch(`https://api.jikan.moe/v4/anime?q=${searchTerm}`);
@@ -45,7 +44,6 @@ const handleSearch = async (e) => {
                 placeholder="Search for an anime"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                ref={inputRef}
             />
             <button type="submit">Search</button>
         </form>
