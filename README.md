@@ -29,5 +29,3 @@ Both routes contain the Navbar component
 
 1. Titles not appearing
     Some anime shows are displayed in AnimeCard without a Title. This is due to the fact that Jikan API lists the "title_english" for that anime as null. However, all other information retrieved is correct.
-2. Remove from favorites
-    Currently, to remove an anime from the favorites page, you will need to search for the anime in the `Home` page, and click the `remove from favorites` button. There is no quick button to remove from favorites at this time.

@@ -1,12 +1,25 @@
 import React from 'react';
 
 
-function FavoritesCard({ storedFavorites }) {
+function FavoritesCard({ storedFavorites, favorites, updateFavorites }) {
+  
+  const handleRemoveFromFavorites = () => {
+    if (!updateFavorites || !favorites) {
+      return;
+    }
+    
+    const updatedFavorites = favorites.filter(fav => fav.mal_id !== storedFavorites.mal_id);
+    updateFavorites(updatedFavorites);
+  };
+
   return (
     <div className= "favorites-card">
       {storedFavorites && (
         <>
           <h1>{storedFavorites.title_english}</h1>
+          <button onClick={handleRemoveFromFavorites}>
+            Remove from Favorites
+          </button>
           <p className="demographics">
             {storedFavorites.demographics
               .map((demographic) => demographic.name)
